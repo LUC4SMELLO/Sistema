@@ -13,3 +13,9 @@ class Cliente:
 
     def __str__(self):
         return f"NOME: {str.upper(self.nome)}\nE-MAIL: {self.email}"
+    
+    @staticmethod
+    def exibir_lista_de_clientes():
+        for cliente in Cliente.lista_de_clientes:
+            print(cliente)
+        
