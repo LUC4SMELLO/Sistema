@@ -21,3 +21,8 @@ class Venda:
 
     def __str__(self):
         return f"ID_VENDA: {self.id_venda}\nCLIENTE: {str.upper(self.cliente)}\nPRODUTOS: {str.upper(self.produtos)}\nQUANTIDADE: {self.quantidade}"
+    
+    @staticmethod
+    def exibir_lista_de_vendas():
+        for venda in Venda.lista_de_vendas:
+            print(venda)
