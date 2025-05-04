@@ -5,12 +5,11 @@ class Produto:
     def __init__(self, nome, preco, estoque):
         self.nome = nome
         self.preco = preco
-        self.quantidade = estoque
+        self.estoque = estoque
 
         Produto.lista_de_produtos.append(
-            {"nome": self.nome, "preco": self.preco, "quantidade": self.quantidade}
+            {"nome": self.nome, "preco": self.preco, "estoque": self.estoque}
         )
 
     def atualizar_estoque(self, quantidade):
         self.estoque = quantidade
-        
