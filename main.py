@@ -111,14 +111,6 @@ def clientes():
         time.sleep(1.9)
         clientes()
     
-
-       
-        
-
-
-
-
-
 def produtos():
     pass
 
