@@ -13,3 +13,8 @@ class Produto:
 
     def atualizar_estoque(self, quantidade):
         self.estoque = quantidade
+
+    @staticmethod
+    def exibir_lista_de_produtos():
+        for produto in Produto.lista_de_produtos:
+            print(produto)
