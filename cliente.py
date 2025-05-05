@@ -17,4 +17,4 @@ class Cliente:
     @staticmethod
     def exibir_lista_de_clientes():
         for cliente in Cliente.lista_de_clientes:
-            print(f"NOME: {cliente['nome'].ljust(25)} CPF: {cliente['cpf'].ljust(15)} E-MAIL: {cliente['email']}")
+            print(f"NOME: {str.upper(cliente['nome'].ljust(25))} CPF: {cliente['cpf'].ljust(15)} E-MAIL: {cliente['email']}")
