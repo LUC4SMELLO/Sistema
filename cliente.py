@@ -1,23 +1,27 @@
 class Cliente:
 
     lista_de_clientes = []
+    id_cliente = 1
 
     def __init__(self, nome, cpf, email):
+        self.id_cliente = Cliente.id_cliente
+        Cliente.id_cliente += 1
+
         self.nome = nome
         self.cpf = cpf
         self.email = email
 
         Cliente.lista_de_clientes.append(
-            {"nome": self.nome, "cpf": self.cpf, "email": self.email}
+            {"id_cliente": self.id_cliente, "nome": self.nome, "cpf": self.cpf, "email": self.email}
         )
 
     def __str__(self):
-        return f"NOME: {str.upper(self.nome)}\nE-MAIL: {self.email}"
+        return f"ID_CLIENTE: {self.id_cliente}\nNOME: {str.upper(self.nome)}\nE-MAIL: {self.email}"
 
     @staticmethod
     def exibir_lista_de_clientes():
         for cliente in Cliente.lista_de_clientes:
-            print(f"NOME: {str.upper(cliente['nome'].ljust(25))} CPF: {cliente['cpf'].ljust(15)} E-MAIL: {cliente['email']}")
+            print(f"ID_CLIENTE: {cliente['id_cliente']} NOME: {str.upper(cliente['nome'].ljust(25))} CPF: {cliente['cpf'].ljust(15)} E-MAIL: {cliente['email']}")
 
 
 # CLIENTES FAKES PARA TESTES
