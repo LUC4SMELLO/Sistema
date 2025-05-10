@@ -21,4 +21,4 @@ class Produto:
     @staticmethod
     def exibir_lista_de_produtos():
         for produto in Produto.lista_de_produtos:
-            print(f"ID_PRODUTO: {produto['id_produto']} NOME: {str.upper(produto['nome'].ljust(15))} PREÇO: {produto['preco']} ESTOQUE: {produto['estoque']}")
+            print(f"ID_PRODUTO: {str(produto['id_produto']).ljust(7)} NOME: {str.upper(produto['nome'].ljust(25))} PREÇO: {str(produto['preco']).ljust(10)} ESTOQUE: {produto['estoque']}")
