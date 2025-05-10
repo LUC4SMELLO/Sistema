@@ -186,12 +186,63 @@ def produtos():
         print("")
         print("OPÇÃO INVÁLIDA...")
         time.sleep(1.9)
-        clientes()
+        produtos()
 
     
 
 def vendas():
-    pass
+    personalizar_titulo("VENDAS")
+
+    def mostrar_opcoes_clientes():
+        print("1. DIGITAR PEDIDO")
+        print("2. EXCLUIR PEDIDO")
+        print("3. EXIBIR TODOS AS VENDAS")
+        print("4. VOLTAR AO MENU")
+        print("")
+
+    mostrar_opcoes_clientes()
+    opcao = input("ESCOLHA UMA OPÇÃO: ")
+
+    def digitar_pedido():
+        personalizar_titulo("DIGITAR PEDIDO")
+
+        cliente = input("DIGITE O NOME DO CLIENTE: ")
+        produtos = input("DIGITE OS PRODUTOS: ")
+        quantidades = input("DIGITE AS QUANTIDADES: ")
+
+        Venda(cliente, produtos, quantidades)
+
+        print("")
+        print("PEDIDO DIGITADO COM SUCESSO!")
+
+        voltar_ao_menu()
+
+    
+    def excluir_pedido():
+        pass
+
+    def exibir_todas_as_vendas():
+        personalizar_titulo("EXIBIR TODAS AS VENDAS")
+
+        Venda.exibir_lista_de_vendas()
+
+        voltar_ao_menu()
+
+    if opcao == "1":
+        digitar_pedido()
+    elif opcao == "2":
+        excluir_pedido()
+    elif opcao == "3":
+        exibir_todas_as_vendas()
+    elif opcao == "4":
+        voltar_ao_menu()
+    else:
+        print("")
+        print("OPÇÃO INVÁLIDA...")
+        time.sleep(1.9)
+        vendas()
+
+    voltar_ao_menu()
 
 def main():
     mostrar_nome_projeto()

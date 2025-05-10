@@ -26,4 +26,4 @@ class Venda:
     @staticmethod
     def exibir_lista_de_vendas():
         for venda in Venda.lista_de_vendas:
-            print(f"ID_PRODUTO: {str(venda['id_venda']).ljust(7)} NOME: {str.upper(venda['cliente'].ljust(25))} PRODUTOS: {str(venda['produtos']).ljust(10)} QUANTIDADE: {venda['quantidade']}")
+            print(f"ID_PRODUTO: {str(venda['id_venda']).ljust(7)} CLIENTE: {str.upper(venda['cliente'].ljust(25))} PRODUTOS: {str(venda['produtos']).ljust(20)} QUANTIDADE: {venda['quantidade']}")
