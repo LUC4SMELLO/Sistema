@@ -13,9 +13,10 @@ class Venda:
 
         Venda.lista_de_vendas.append(
             {
+                "id_venda": self.id_venda,
                 "cliente": self.cliente,
                 "produtos": self.produtos,
-                "quantidade": self.quantidade,
+                "quantidade": self.quantidade
             }
         )
 
@@ -25,4 +26,4 @@ class Venda:
     @staticmethod
     def exibir_lista_de_vendas():
         for venda in Venda.lista_de_vendas:
-            print(venda)
+            print(f"ID_PRODUTO: {str(venda['id_venda']).ljust(7)} NOME: {str.upper(venda['cliente'].ljust(25))} PRODUTOS: {str(venda['produtos']).ljust(10)} QUANTIDADE: {venda['quantidade']}")
