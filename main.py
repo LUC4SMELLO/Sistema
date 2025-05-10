@@ -148,20 +148,21 @@ def produtos():
 
         produto_encontrado = None
         for produto in Produto.lista_de_produtos:
-            if produto["nome"] == nome_produto:
+            if str.upper(produto[("nome")]) == str.upper(nome_produto):
                 produto_encontrado = produto
                 break
+
         if produto_encontrado:
             nova_quantidade = input("DIGITE A NOVA QUANTIDADE: ")
             produto_encontrado["estoque"] = nova_quantidade
+            print("")
+            print("QUANTIDADE ATUALIZADA COM SUCESSO!")
+            voltar_ao_menu()
         else:
             print("")
             print("PRODUTO NÃO ENCONTRADO. TENTE NOVAMENTE")
-            produtos()
-
-        print("QUANTIDADE ATUALIZADA COM SUCESSO!")
-
-        voltar_ao_menu()
+            voltar_ao_menu()
+            
 
 
 
