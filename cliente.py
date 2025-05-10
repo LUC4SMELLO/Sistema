@@ -21,7 +21,7 @@ class Cliente:
     @staticmethod
     def exibir_lista_de_clientes():
         for cliente in Cliente.lista_de_clientes:
-            print(f"ID_CLIENTE: {cliente['id_cliente']} NOME: {str.upper(cliente['nome'].ljust(25))} CPF: {cliente['cpf'].ljust(15)} E-MAIL: {cliente['email']}")
+            print(f"ID_CLIENTE: {str(cliente['id_cliente']).ljust(10)} NOME: {str.upper(cliente['nome'].ljust(30))} CPF: {str(cliente['cpf']).ljust(30)} E-MAIL: {cliente['email']}")
 
 
 # CLIENTES FAKES PARA TESTES
